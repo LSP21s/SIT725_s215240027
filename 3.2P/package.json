@@ -1,0 +1,32 @@
+{
+"name": "sit725-3.3p-task",
+"version": "1.0.0",
+"description": "sit725-3.3p-task",
+"main": "server.js",
+"scripts": {
+"start": "node server.js"
+},
+"repository": {
+"type": "git",
+"url": "git+tbct"
+},
+"keywords": [
+"Nodejs",
+"Express",
+"Materialize",
+"HTML",
+"JS",
+"CSS"
+],
+"author": "Shehan Perera",
+"license": "MIT",
+"bugs": {
+"url": "tbc"
+},
+"homepage": "tbc",
+"dependencies": {
+"express": "^4.17.1"
+}
+}
+
+

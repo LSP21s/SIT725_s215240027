@@ -8,7 +8,7 @@
 },
 "repository": {
 "type": "git",
-"url": "git+tbct"
+"url": "git+https://github.com/LSP21s/SIT725_s215240027/tree/main/3.2P"
 },
 "keywords": [
 "Nodejs",
@@ -21,9 +21,9 @@
 "author": "Shehan Perera",
 "license": "MIT",
 "bugs": {
-"url": "tbc"
+"url": "https://github.com/LSP21s/SIT725_s215240027/tree/main/3.2P"
 },
-"homepage": "tbc",
+"homepage": "https://github.com/LSP21s/SIT725_s215240027/tree/main/3.2P",
 "dependencies": {
 "express": "^4.17.1"
 }

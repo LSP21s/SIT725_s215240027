@@ -1,42 +1,34 @@
 const clickMe = () => {
-alert("Thanks for clicking me. Hope you have a nice day!")
-}
-$(document).ready(function(){
-$('.materialboxed').materialbox();
-$('#clickMeButton').click(()=>{
-clickMe();
-})
-});
+  alert("Thanks for clicking me. Hope you have a nice day!");
+};
 
 const submitForm = () => {
-  let formData = {};
-  formData.first_name = $('#first_name').val();
-  formData.last_name = $('#last_name').val();
-  formData.password = $('#password').val();
-  formData.email = $('#email').val();
+  let formData = {
+    first_name: $('#first_name').val(),
+    last_name: $('#last_name').val(),
+    password: $('#password').val(),
+    email: $('#email').val()
+  };
 
-  console.log("Form Data Submitted: ", formData);
-}
+  console.log("Form Data Submitted:", formData);
+
+  
+  fetch('http://localhost:3000/getUserInfo')
+    .then(response => response.json())
+    .then(data => {
+      console.log("GET Response from server:", data);
+      alert(data.message);  
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+      alert("Something went wrong, try again!");
+    });
+};
 
 const cardList = [
-  { 
-    title: "Coach Alex", 
-    image: "images/alex.png", 
-    link: "About Coach Alex", 
-    description: "Professional boxing expert with 10 years of experience!" 
-  },
-  { 
-    title: "Coach Mia", 
-    image: "images/mia.png", 
-    link: "About Coach Mia", 
-    description: "Specialist counter striking." 
-  },
-  { 
-    title: "Coach David", 
-    image: "images/david.png", 
-    link: "About Coach David", 
-    description: "Former champ and footwork specilist." 
-  }
+  { title: "Coach Alex", image: "images/alex.png", link: "About Coach Alex", description: "Professional boxing expert with 10 years of experience!" },
+  { title: "Coach Mia", image: "images/mia.png", link: "About Coach Mia", description: "Specialist counter striking." },
+  { title: "Coach David", image: "images/david.png", link: "About Coach David", description: "Former champ and footwork specilist." }
 ];
 
 const addCards = (items) => {
@@ -64,12 +56,10 @@ const addCards = (items) => {
   });
 };
 
-
 $(document).ready(function(){
   console.log("JS Loaded Successfully");
   $('.materialboxed').materialbox();
   $('.modal').modal();  
-  $('#clickMeButton').click(() => submitForm());
+  $('#formSubmit').click(() => submitForm());  
   addCards(cardList);
 });
-

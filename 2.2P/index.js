@@ -17,4 +17,13 @@ app.get('/add', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
+})
+;
+
+app.get('/getUserInfo', (req, res) => {
+  res.json({ message: "Form submitted successfully!", status: "OK" });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });

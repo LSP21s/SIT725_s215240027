@@ -1,0 +1,75 @@
+navbar-size {
+width: 95%;
+margin: 0 auto;
+}
+.user-image-size {
+height: 64px;
+}
+
+
+.user-image-size {
+  width: 80px;      
+  height: auto;     
+  margin-left: 20px; 
+}
+
+.main-body {
+background-color: #0d0101;
+color: white;
+height: calc(300vh - 10px);
+
+}
+
+.materialboxed-image {
+  max-width: 400px;   
+  width: 90%;         
+  height: auto;       
+  display: block;
+  margin: 20px auto;  
+  border-radius: 10px; 
+}
+
+
+.click-me-button {
+  background-color: #a2362a !important;
+  color: white !important;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 18px 50px; 
+  border-radius: 40px; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.click-me-button:hover {
+  background-color: #8b1f18 !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.btn-icon {
+  font-size: 28px; 
+  margin-right: 8px;
+}
+
+.card-image img {
+  height: 300px;       
+  width: 100%;         
+  object-fit: cover;  
+}
+
+
+
+.card-reveal .card-title {
+  color: rgb(12, 3, 3) !important;
+}
+
+.card-reveal p {
+  color: rgb(0, 0, 0) !important;
+}

@@ -62,6 +62,9 @@ const addCards = (items) => {
             '<span class="card-title grey-text text-darken-4">' + item.title +
               '<i class="material-icons right">close</i></span>' +
             '<p class="card-text">' + item.description + '</p>' +
+            '<p class="card-text">' + item.available + '</p>' +
+            '<p class="card-text">' + item.rating + '</p>' +
+            '<p class="card-text">' + item.price + '</p>' 
           '</div>' +
         '</div>' +
       '</div>';

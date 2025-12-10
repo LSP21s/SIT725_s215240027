@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Management - Home</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+
+<header>
+    <div class="logo">Recipe Manager</div>
+    <nav>
+       <a href="dashboard.html">My Recipes</a>
+        <!-- Optional nav items -->
+        <a href="#">Login</a>
+        <a href="#">Create Profile</a>
+    </nav>
+</header>
+
+<main>
+    <!-- Search recipes -->
+    <section class="search-section">
+        <label for="search">Search recipes:</label>
+        <input id="search" class="search-input" type="text" placeholder="Search by name, ingredient, or category">
+    </section>
+
+    <!-- Primary actions -->
+    <section class="nav-buttons">
+        <button>Browse Categories</button>
+        <button class="secondary">Latest Recipes</button>
+        <button class="secondary" onclick="location.href='dashboard.html'">
+  My Recipes
+</button>
+    </section>
+
+    <!-- Featured recipe card -->
+    <section class="featured-card">
+        <div class="featured-image">
+            <div class="featured-image">
+    <img src="images/yumpasta.png" alt="Featured Recipe Image">
+</div>
+        </div>
+        <div class="featured-content">
+            <div class="featured-title">Creamy Garlic Pasta</div>
+            <p class="featured-description">
+                A quick and easy creamy garlic pasta perfect for weeknight dinners.
+            </p>
+            <span class="tag">30 mins • Dinner</span>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - Recipes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>My Recipes</h2>
+    <a href="index.html">Home</a>
+</header>
+
+<main style="max-width:900px;margin:auto;padding:16px">
+
+    <div style="margin-bottom:20px;">
+        <input type="text" placeholder="Search recipes" style="padding:8px;width:100%">
+    </div>
+
+    <div id="recipes-container" style="display:flex;flex-wrap:wrap;gap:16px;"></div>
+
+</main>
+
+<script>
+async function loadRecipes(){
+    const res = await fetch("/api/recipes");
+    const recipes = await res.json();
+
+    const container = document.getElementById("recipes-container");
+
+    recipes.forEach(r => {
+        const card = document.createElement("div");
+        card.style.width = "260px";
+        card.style.border = "1px solid #ddd";
+        card.style.borderRadius = "6px";
+        card.style.overflow = "hidden";
+        card.style.background = "#fff";
+
+        card.innerHTML = `
+            <div style="height:160px;background:url('${r.image}') center/cover no-repeat;"></div>
+            <div style="padding:12px">
+                <h3 style="margin:0 0 8px;font-size:18px">${r.title}</h3>
+                <p style="margin:0 0 8px">${r.category}</p>
+                <small>${r.time} mins</small>
+            </div>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+loadRecipes();
+</script>
+
+</body>
+</html>

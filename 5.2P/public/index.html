@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <h1>Book Catalog</h1>
+
+  <ul id="bookList"></ul>
+
+  <script>
+    window.onload = async function () {
+      try {
+        const res = await fetch('/api/book');   
+        const books = await res.json();         
+
+        const list = document.getElementById('bookList');
+        list.innerHTML = '';
+
+        books.forEach(book => {                
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <span class="title">${book.title}</span><br>
+            <span class="author">by ${book.author}</span>
+          `;
+          list.appendChild(li);
+        });
+
+      } catch (error) {
+        console.error("Error loading books:", error);
+      }
+    };
+  </script>
+
+</body>
+</html>

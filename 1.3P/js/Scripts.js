@@ -14,3 +14,5 @@ function changeTextcolour() {
 
   document.getElementById("heading").style.color = textColors[randomIndex];
 }
+
+//Test

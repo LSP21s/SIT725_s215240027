@@ -74,3 +74,6 @@ async function loadAllRecipes() {
     const data = await res.json();
     displayCards(data);
 };
+
+
+//

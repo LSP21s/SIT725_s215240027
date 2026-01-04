@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add New Recipe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="add-recipe-container">
+
+    <h2>Add New Recipe</h2>
+
+    <label>Recipe Title:</label>
+    <input id="title" type="text">
+
+    <label>Category:</label>
+    <select id="category">
+        <option>Dessert</option>
+        <option>Drinks</option>
+        <option>Dinner</option>
+        <option>Breakfast</option>
+        <option>Snack</option>
+    </select>
+
+    <div class="form-row">
+        <div>
+            <label>Cook Time (mins):</label>
+            <input id="time" type="number">
+        </div>
+
+        <div>
+            <label>Serves:</label>
+            <input id="serves" type="number">
+        </div>
+    </div>
+
+    <label>Ingredients:</label>
+    <div id="ingredients-area" class="dynamic-area">
+        <input placeholder="Ingredient">
+    </div>
+    <button type="button" class="secondary-btn" onclick="addIngredient()">+ Add ingredient</button>
+
+    <label>Instructions:</label>
+    <div id="instructions-area" class="dynamic-area">
+        <textarea placeholder="Step"></textarea>
+    </div>
+    <button type="button" class="secondary-btn" onclick="addInstruction()">+ Add step</button>
+
+    <label>Upload Image:</label>
+    <input id="image" type="file">
+
+    <div class="actions">
+        <button onclick="saveRecipe()">Save Recipe</button>
+        <button class="secondary" onclick="location.href='dashboard.html'">Cancel</button>
+    </div>
+
+</main>
+
+<script>
+function addIngredient(){
+    const div = document.getElementById("ingredients-area");
+    const input = document.createElement("input");
+    input.placeholder = "Ingredient";
+    div.appendChild(input);
+}
+
+function addInstruction(){
+    const div = document.getElementById("instructions-area");
+    const textarea = document.createElement("textarea");
+    textarea.placeholder = "Step";
+    div.appendChild(textarea);
+}
+
+function saveRecipe(){
+    alert("Saving recipe…");
+}
+</script>
+
+</body>
+</html>

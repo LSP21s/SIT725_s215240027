@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="style.css">
+       <a href="index.html">Home</a>
+</head>
+<body>
+
+<main class="recipe-detail-container">
+
+    <h2 id="recipe-title">Creamy Garlic Pasta</h2>
+
+    <div class="recipe-image" style="background-image:url('images/pasta.jpg')"></div>
+
+    <div class="recipe-meta">
+        <span id="recipe-category">Category: Dinner</span>
+        <span id="recipe-time">Time: 30 mins</span>
+        <span id="recipe-serves">Serves: 4</span>
+    </div>
+
+    <h3>Ingredients</h3>
+    <ul id="ingredients-list">
+        <li>Milk</li>
+        <li>Eggs</li>
+        <li>Flour</li>
+    </ul>
+
+    <h3>Instructions</h3>
+    <ol id="instructions-list">
+        <li>Mix ingredients</li>
+        <li>Heat oven</li>
+        <li>Bake 30 minutes</li>
+    </ol>
+
+    <div class="actions">
+        <button onclick="editRecipe()">Edit</button>
+        <button class="secondary" onclick="deleteRecipe()">Delete</button>
+        <button class="secondary" onclick="downloadPDF()">Download PDF</button>
+        <button class="secondary" onclick="window.print()">Print</button>
+    </div>
+
+</main>
+
+
+<script>
+function editRecipe(){
+    alert("Later, we will connect edit page");
+}
+
+function deleteRecipe(){
+    alert("Later this will delete from MongoDB");
+}
+
+function downloadPDF(){
+    alert("Later we generate PDF here");
+}
+</script>
+
+</body>
+</html>

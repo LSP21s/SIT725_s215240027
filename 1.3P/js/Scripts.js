@@ -7,3 +7,10 @@ document.getElementById("heading").innerHTML = textsArray[number];
 function getRandomNumberBetween(min,max){
 return Math.floor(Math.random()*(max-min+1)+min);
 }
+
+function changeTextcolour() {
+  var textColors = ["blue", "red", "green"];
+  var randomIndex = Math.floor(Math.random() * textColors.length);
+
+  document.getElementById("heading").style.color = textColors[randomIndex];
+}

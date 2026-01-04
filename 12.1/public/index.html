@@ -4,53 +4,58 @@
     <meta charset="UTF-8">
     <title>Recipe Management - Home</title>
     <link rel="stylesheet" href="style.css">
-    
-
 </head>
 <body>
 
 <header>
     <div class="logo">Recipe Manager</div>
     <nav>
-       <a href="dashboard.html">My Recipes</a>
-        <!-- Optional nav items -->
         <a href="#">Login</a>
         <a href="#">Create Profile</a>
     </nav>
 </header>
 
+
 <main>
-    <!-- Search recipes -->
-    <section class="search-section">
-        <label for="search">Search recipes:</label>
-        <input id="search" class="search-input" type="text" placeholder="Search by name, ingredient, or category">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Welcome back, User</h1>
+        <p>Find your next recipe</p>
+
+        <form class="hero-search" onsubmit="event.preventDefault(); loadSearch();">
+            <input id="search" type="text" placeholder="Search recipes...">
+            <button type="submit">Search</button>
+        </form>
     </section>
 
-    <!-- Primary actions -->
-    <section class="nav-buttons">
-        <button>Browse Categories</button>
-        <button class="secondary">Latest Recipes</button>
-        <button class="secondary" onclick="location.href='dashboard.html'">
-  My Recipes
-</button>
+
+
+    <!-- FEATURED recipes -->
+    <section class="section">
+        <h2>Featured Recipes</h2>
+
+        <div id="featured-section" class="card-grid">
+            <!-- Cards will load here from scripts.js -->
+        </div>
     </section>
 
-    <!-- Featured recipe card -->
-    <section class="featured-card">
-        <div class="featured-image">
-            <div class="featured-image">
-    <img src="images/yumpasta.png" alt="Featured Recipe Image">
-</div>
-        </div>
-        <div class="featured-content">
-            <div class="featured-title">Creamy Garlic Pasta</div>
-            <p class="featured-description">
-                A quick and easy creamy garlic pasta perfect for weeknight dinners.
-            </p>
-            <span class="tag">30 mins • Dinner</span>
+
+
+    <!-- LATEST RECIPES -->
+    <section class="section">
+        <h2>Latest Recipes</h2>
+
+        <div id="latest-section" class="card-grid">
+            <!-- JS will fill this with loadLatest() -->
         </div>
     </section>
+
+
 </main>
+
+
+<script src="scripts.js"></script>
 
 </body>
 </html>

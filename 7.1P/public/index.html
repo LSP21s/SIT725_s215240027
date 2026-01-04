@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>New Year Wish Wall</title>
+</head>
+<body>
+  <h1>New Year Wish Wall</h1>
+
+  <p id="socketStatus">Connecting…</p>
+
+  <h2>Add a wish</h2>
+
+  <label>
+    Name:
+    <input id="author" placeholder="Sam" maxlength="30" />
+  </label>
+
+  <label>
+    <input type="checkbox" id="anonymous" />
+    Anonymous
+  </label>
+
+  <br /><br />
+
+  <label>
+    Category:
+    <select id="category">
+      <option value="Career">Career</option>
+      <option value="Fitness">Fitness</option>
+      <option value="Finance">Finance</option>
+      <option value="Study">Study</option>
+      <option value="Travel">Travel</option>
+      <option value="Lifestyle">Lifestyle</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+
+  <br /><br />
+
+  <label>
+    Wish:
+    <input id="wishText" placeholder="Type your wish…" maxlength="180" size="50" />
+  </label>
+
+  <button id="submitBtn">Post</button>
+
+  <p id="feedback"></p>
+
+  <hr />
+
+  <h2>Wish list</h2>
+  <ul id="wishList"></ul>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Categories</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="categories-container">
+
+    <h2>Categories</h2>
+
+    <div class="search-bar">
+        <input id="categorySearch" type="text" placeholder="Search categories...">
+    </div>
+
+    <div class="category-grid">
+        <button onclick="openCategory('Breakfast')">Breakfast</button>
+        <button onclick="openCategory('Lunch')">Lunch</button>
+        <button onclick="openCategory('Dinner')">Dinner</button>
+        <button onclick="openCategory('Snacks')">Snacks</button>
+        <button onclick="openCategory('Dessert')">Dessert</button>
+        <button onclick="openCategory('Drinks')">Drinks</button>
+    </div>
+
+    <p class="category-tip">
+        Click a category to see all recipes.
+    </p>
+
+</main>
+
+
+<script>
+function openCategory(category){
+    // Later: redirect and load recipes dynamically by category
+    alert("Open recipes in category: " + category);
+
+    // Example:
+    // location.href = `dashboard.html?cat=${category}`;
+}
+</script>
+
+</body>
+</html>
